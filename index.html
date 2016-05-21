@@ -7,19 +7,22 @@
 
 <body>
     <div class="" style="width:100%">
-        <header class="w3-container w3-green w3-center w3-hover-blue">
+        <header class="w3-container w3-blue w3-center">
             <h3>Bạn có biết?</h3> </header>
         <div class="w3-container w3-animate-opacity">
             <hr> <img src="img/1.png" id="hinhanh" class="w3-right w3-margin-right w3-animate-top" style="width:80px">
-            <h1 class="w3-center "> <b> Mã biển số xe của Nam Định là 18 <br></h1>
+            <h1 class="w3-center"> <b id="textshow"><br></h1>
             <br> </div>
     </div>
 </body>
 <script>
+var kienthuc = ['Mã biển số xe tỉnh Cao Bằng là 11', 'Mã biển số xe tỉnh Lạng Sơn là 12', 'Mã biển số xe tỉnh Quảng Ninh là 14', 'Mã biển số xe tỉnh Hải Phòng là 15 và 16', 'Mã biển số xe tỉnh Thái Bình là 17', 'Mã biển số xe tỉnh Nam Định là 18', 'Mã biển số xe tỉnh Phú Thọ là 19', 'Mã biển số xe tỉnh Thái Nguyên là 20', 'Mã biển số xe tỉnh Yên Bái là 21', 'Mã biển số xe tỉnh Tuyên Quang là 22', 'Mã biển số xe tỉnh Hà Giang là 23', 'Mã biển số xe tỉnh Lào Cai là 24', 'Mã biển số xe tỉnh Lai Châu là 25', 'Mã biển số xe tỉnh Sơn La là 26', 'Mã biển số xe tỉnh Điện Biên là 27', 'Mã biển số xe tỉnh Hòa Bình là 28', 'Mã biển số xe thủ đô Hà Nội là 29-30-31-32-33-40', 'Mã biển số xe tỉnh Hải Dương là 34', 'Mã biển số xe tỉnh Ninh Bình là 35', 'Mã biển số xe tỉnh Thanh Hóa là 36', 'Mã biển số xe tỉnh Nghệ An là 37', 'Mã biển số xe tỉnh Hà Tĩnh là 38', 'Mã biển số xe tỉnh Đồng Nai là 39 và 60', 'Mã biển số xe tỉnh Đà Nẵng là 43', 'Mã biển số xe tỉnh Đắk Lắk là 47', 'Mã biển số xe tỉnh Đắk Nông là 48', 'Mã biển số xe tỉnh Lâm Đồng là 49', 'Mã biển số xe thành phố Hồ Chí Minh từ 51 đến 59 và 41', 'Mã biển số xe tỉnh Bình Dương là 61', 'Mã biển số xe tỉnh Long An là 62', 'Mã biển số xe tỉnh Tiền Giang là 63', 'Mã biển số xe tỉnh Vĩnh Long là 64', 'Mã biển số xe tỉnh Cần Thơ là 65', 'Mã biển số xe tỉnh Đồng Tháp là 66', 'Mã biển số xe tỉnh An Giang là 67', 'Mã biển số xe tỉnh Kiên Giang là 68', 'Mã biển số xe tỉnh Cà Mau là 69', 'Mã biển số xe tỉnh Tây Ninh là 70', 'Mã biển số xe tỉnh Bến Tre là 71', 'Mã biển số xe tỉnh Bà Rịa–Vũng Tàu là 72', 'Mã biển số xe tỉnh Quảng Bình là 73', 'Mã biển số xe tỉnh Quảng Trị là 74', 'Mã biển số xe tỉnh Thừa Thiên–Huế là 75', 'Mã biển số xe tỉnh Quảng Ngãi là 76', 'Mã biển số xe tỉnh Bình Định là 77', 'Mã biển số xe tỉnh Phú Yên là 78', 'Mã biển số xe tỉnh Khánh Hoàn là 79', 'Mã biển số xe tỉnh Gia Lai là 81', 'Mã biển số xe tỉnh Kon Tum là 82', 'Mã biển số xe tỉnh Sóc Trăng là 83', 'Mã biển số xe tỉnh Trà Vinh là 84', 'Mã biển số xe tỉnh Ninh Thuận là 85', 'Mã biển số xe tỉnh Bình Thuận là 86', 'Mã biển số xe tỉnh Vĩnh Phúc là 88', 'Mã biển số xe tỉnh Hưng Yên là 89', 'Mã biển số xe tỉnh Hà Nam là 90', 'Mã biển số xe tỉnh Quảng Nam là 92', 'Mã biển số xe tỉnh Bình Phước là 93', 'Mã biển số xe tỉnh Bạc Liêu là 94', 'Mã biển số xe tỉnh Hậu Giang là 95', 'Mã biển số xe tỉnh Bắc Kạn là 97', 'Mã biển số xe tỉnh Bắc Giang là 13 và 98 ', 'Mã biển số xe tỉnh Bắc Ninh là 99 '];
+
 function changeImage() {
-    var ngaunhien = Math.floor((Math.random() * 3) + 1);
+    var ngaunhien = Math.floor((Math.random() * 20) + 1);
     var image = document.getElementById('hinhanh');
     image.src = "img/" + ngaunhien + ".png";
+    document.getElementById("textshow").innerHTML = kienthuc[Math.floor((Math.random() * kienthuc.length))];
 }
 changeImage();
 </script>
