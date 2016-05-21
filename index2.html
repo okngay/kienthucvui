@@ -1,7 +1,83 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style type="text/css">
+.w3-blue,
+.w3-hover-blue:hover {
+    color: #fff!important;
+    background-color: #2196F3!important
+}
+
+.w3-container {
+    padding: 0.01em 16px
+}
+
+.w3-container:after,
+.w3-row:after,
+.w3-row-padding:after,
+.w3-topnav:after,
+.w3-clear:after,
+.w3-btn-group:before,
+.w3-btn-group:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.w3-animate-opacity {
+    -webkit-animation: opac 1.5s;
+    animation: opac 1.5s
+}
+
+@-webkit-keyframes opac {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.w3-center {
+    text-align: center!important
+}
+
+.w3-right {
+    float: right!important
+}
+
+.w3-margin-right {
+    margin-right: 16px!important
+}
+
+.w3-animate-top {
+    position: relative;
+    -webkit-animation: animatetop 0.4s;
+    animation: animatetop 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+</style>
 
 <body class="w3-blue">
     <div style="width:100%">
