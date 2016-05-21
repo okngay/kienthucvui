@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+    <div style="width:100%">
+        <header class="w3-container w3-green w3-center">
+            <h3>Địa lý</h3> </header>
+        <div class="w3-container w3-animate-opacity">
+            <hr> <img src="img/1.png" id="hinhanh" class="w3-right w3-margin-right w3-animate-top" style="width:80px">
+            <h2 class="w3-center"> <b id="textshow"><br></h2>
+            <br> </div>
+    </div>
+</body>
+<script>
+var kienthuc = ['An Giang là tỉnh có dân số đông nhất và diện tích đứng thứ 4 (sau tỉnh Kiên Giang, tỉnh Cà Mau và tỉnh Long An) ở miền Tây Nam Bộ (còn gọi là vùng đồng bằng sông Cửu Long). Việt Nam. Một phần của An Giang nằm trong tứ giác Long Xuyên.'];
+
+function changeImage() {
+    var ngaunhien = Math.floor((Math.random() * 20) + 1);
+    var image = document.getElementById('hinhanh');
+    image.src = "img/" + ngaunhien + ".png";
+    document.getElementById("textshow").innerHTML = kienthuc[Math.floor((Math.random() * kienthuc.length))];
+}
+changeImage();
+</script>
+
+</html>
