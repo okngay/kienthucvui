@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<title>OkTab+ Tab mới cho người Việt !</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
 <body>
-
-<img id="pic" width="0" height="0"
-src="http://www.okngay.com/kienthucvui/hinhnen/1.png">
-<canvas id="myCanvas" width="854" height="297"
-style='height: 100%; width: 100%; object-fit: contain '>
-</canvas>
-
-
-<script>
-window.onload = function() {
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    var img = document.getElementById("pic");
-   ctx.drawImage(img, 0, 0,854,297);
-ctx.font = "32px Comic Sans MS";
-ctx.fillStyle = "white";
-ctx.textAlign = "center";
-ctx.fillText("Bạn có biết \n là xuống dòng không ?", canvas.width/2, canvas.height/2); 
-};
-</script>
-
+    <div class="w3-card-4" style="width:100%">
+        <header class="w3-container w3-blue w3-center">
+            <h3>Bạn có biết?</h3> </header>
+        <div class="w3-container">
+            <hr> <img src="http://www.w3schools.com/w3css/img_avatar3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+            <h2>Mã biển số xe của Nam Định là 18</h2>
+            <br> </div>
+        <button class="w3-btn-block w3-green ">OkTab+</button>
+    </div>
 </body>
+
 </html>
