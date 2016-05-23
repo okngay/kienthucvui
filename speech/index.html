@@ -121,11 +121,6 @@ a:hover {
 <div id="copy_info" class="info"> Press Control-C to copy text.
 <br>(Command-C on Mac.) </div>
 </div>
-<div class="sidebyside">
-<button id="email_button" class="button" onclick="emailButton()"> Create Email</button>
-<div id="email_info" class="info"> Text sent to default email application.
-<br> (See chrome://settings/handlers to change.) </div>
-</div>
 <p>
 <div id="div_language">
 <select id="select_language" onchange="updateCountry()"></select> &nbsp;&nbsp;
@@ -291,9 +286,9 @@ if (!('webkitSpeechRecognition' in window)) {
         final_transcript = capitalize(final_transcript);
         final_span.innerHTML = linebreak(final_transcript);
         interim_span.innerHTML = linebreak(interim_transcript);
-        alert(final_transcript);
         if (final_transcript || interim_transcript) {
             showButtons('inline-block');
+            alert(final_transcript);
         }
     };
 }
@@ -316,16 +311,6 @@ function capitalize(s) {
     });
 }
 
-function createEmail() {
-    var n = final_transcript.indexOf('\n');
-    if (n < 0 || n >= 80) {
-        n = 40 + final_transcript.substring(40).indexOf(' ');
-    }
-    var subject = encodeURI(final_transcript.substring(0, n));
-    var body = encodeURI(final_transcript.substring(n + 1));
-    window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
-}
-
 function copyButton() {
     if (recognizing) {
         recognizing = false;
@@ -333,19 +318,6 @@ function copyButton() {
     }
     copy_button.style.display = 'none';
     copy_info.style.display = 'inline-block';
-    showInfo('');
-}
-
-function emailButton() {
-    if (recognizing) {
-        create_email = true;
-        recognizing = false;
-        recognition.stop();
-    } else {
-        createEmail();
-    }
-    email_button.style.display = 'none';
-    email_info.style.display = 'inline-block';
     showInfo('');
 }
 
