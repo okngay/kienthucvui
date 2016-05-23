@@ -200,7 +200,7 @@ var langs = [
         ['yue-Hant-HK', '粵語 (香港)']
     ],
     ['日本語', ['ja-JP']],
-    ['Lingua latīna', ['la']]
+    ['Tiếng Việt', ['vi-VN']]
 ];
 for (var i = 0; i < langs.length; i++) {
     select_language.options[i] = new Option(langs[i][0], i);
@@ -215,7 +215,7 @@ function updateCountry() {
         select_dialect.remove(i);
     }
     var list = langs[select_language.selectedIndex];
-    for (i = 1; i < list.length; i++) {
+    for (var i = 1; i < list.length; i++) {
         select_dialect.options.add(new Option(list[i][1], list[i][0]));
     }
     select_dialect.style.visibility = list[1].length == 1 ? 'hidden' : 'visible';
