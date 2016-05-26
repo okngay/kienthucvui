@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<style type="text/css">
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
+
+html {
+    overflow-x: hidden
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.w3-slim,
+.w3-wide {
+    font-family: "Segoe UI", Arial, sans-serif
+}
+
+h1 {
+    font-size: 36px
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+.w3-serif {
+    font-family: "Times New Roman", Times, serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin: 10px 0
+}
+
+.w3-wide {
+    letter-spacing: 4px
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    font-weight: inherit
+}
+
+.w3-blue,
+.w3-hover-blue:hover {
+    color: #fff!important;
+    background-color: #2196F3!important
+}
+
+.w3-container {
+    padding: 0.01em 16px
+}
+
+.w3-container:after,
+.w3-row:after,
+.w3-row-padding:after,
+.w3-topnav:after,
+.w3-clear:after,
+.w3-btn-group:before,
+.w3-btn-group:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.w3-animate-opacity {
+    -webkit-animation: opac 1.5s;
+    animation: opac 1.5s
+}
+
+@-webkit-keyframes opac {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.w3-center {
+    text-align: center!important
+}
+
+.w3-right {
+    float: right!important
+}
+
+.w3-margin-right {
+    margin-right: 16px!important
+}
+
+.w3-animate-top {
+    position: relative;
+    -webkit-animation: animatetop 0.4s;
+    animation: animatetop 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+</style>
+
+<body>
+    <div class="" style="width:100%" id="noidung">
+        <header class="w3-container w3-blue w3-center">
+            <h3>Bạn có biết?</h3> </header>
+        <br>
+        <div class="w3-container w3-animate-opacity"> <img src="img/1.png" id="hinhanh" class="w3-right w3-margin-right w3-animate-top" style="width:80px">
+            <h1 class="w3-center"> <b id="textshow"><br></h1>
+            <br> </div>
+    </div>
+    <audio controls id="myAudio" class="w3-center" style="width: 100% ; display: none;  ">
+        <source id="AudopScr" src="" type='audio/mpeg; codecs="mp3"'>
+    </audio>
+</body>
+<script>
+var kienthuc = ['Mã biển số xe tỉnh Cao Bằng là 11', 'Mã biển số xe tỉnh Lạng Sơn là 12', 'Mã biển số xe tỉnh Quảng Ninh là 14', 'Mã biển số xe tỉnh Hải Phòng là 15 và 16', 'Mã biển số xe tỉnh Thái Bình là 17', 'Mã biển số xe tỉnh Nam Định là 18', 'Mã biển số xe tỉnh Phú Thọ là 19', 'Mã biển số xe tỉnh Thái Nguyên là 20', 'Mã biển số xe tỉnh Yên Bái là 21', 'Mã biển số xe tỉnh Tuyên Quang là 22', 'Mã biển số xe tỉnh Hà Giang là 23', 'Mã biển số xe tỉnh Lào Cai là 24', 'Mã biển số xe tỉnh Lai Châu là 25', 'Mã biển số xe tỉnh Sơn La là 26', 'Mã biển số xe tỉnh Điện Biên là 27', 'Mã biển số xe tỉnh Hòa Bình là 28', 'Mã biển số xe thủ đô Hà Nội là 29 đến 33 và 40', 'Mã biển số xe tỉnh Hải Dương là 34', 'Mã biển số xe tỉnh Ninh Bình là 35', 'Mã biển số xe tỉnh Thanh Hóa là 36', 'Mã biển số xe tỉnh Nghệ An là 37', 'Mã biển số xe tỉnh Hà Tĩnh là 38', 'Mã biển số xe tỉnh Đồng Nai là 39 và 60', 'Mã biển số xe tỉnh Đà Nẵng là 43', 'Mã biển số xe tỉnh Đắk Lắk là 47', 'Mã biển số xe tỉnh Đắk Nông là 48', 'Mã biển số xe tỉnh Lâm Đồng là 49', 'Mã biển số xe thành phố Hồ Chí Minh từ 51 đến 59 và 41', 'Mã biển số xe tỉnh Bình Dương là 61', 'Mã biển số xe tỉnh Long An là 62', 'Mã biển số xe tỉnh Tiền Giang là 63', 'Mã biển số xe tỉnh Vĩnh Long là 64', 'Mã biển số xe tỉnh Cần Thơ là 65', 'Mã biển số xe tỉnh Đồng Tháp là 66', 'Mã biển số xe tỉnh An Giang là 67', 'Mã biển số xe tỉnh Kiên Giang là 68', 'Mã biển số xe tỉnh Cà Mau là 69', 'Mã biển số xe tỉnh Tây Ninh là 70', 'Mã biển số xe tỉnh Bến Tre là 71', 'Mã biển số xe tỉnh Bà Rịa–Vũng Tàu là 72', 'Mã biển số xe tỉnh Quảng Bình là 73', 'Mã biển số xe tỉnh Quảng Trị là 74', 'Mã biển số xe tỉnh Thừa Thiên–Huế là 75', 'Mã biển số xe tỉnh Quảng Ngãi là 76', 'Mã biển số xe tỉnh Bình Định là 77', 'Mã biển số xe tỉnh Phú Yên là 78', 'Mã biển số xe tỉnh Khánh Hoà là 79', 'Mã biển số xe tỉnh Gia Lai là 81', 'Mã biển số xe tỉnh Kon Tum là 82', 'Mã biển số xe tỉnh Sóc Trăng là 83', 'Mã biển số xe tỉnh Trà Vinh là 84', 'Mã biển số xe tỉnh Ninh Thuận là 85', 'Mã biển số xe tỉnh Bình Thuận là 86', 'Mã biển số xe tỉnh Vĩnh Phúc là 88', 'Mã biển số xe tỉnh Hưng Yên là 89', 'Mã biển số xe tỉnh Hà Nam là 90', 'Mã biển số xe tỉnh Quảng Nam là 92', 'Mã biển số xe tỉnh Bình Phước là 93', 'Mã biển số xe tỉnh Bạc Liêu là 94', 'Mã biển số xe tỉnh Hậu Giang là 95', 'Mã biển số xe tỉnh Bắc Kạn là 97', 'Mã biển số xe tỉnh Bắc Giang là 13 và 98 ', 'Mã biển số xe tỉnh Bắc Ninh là 99 '];
+
+function changeImage() {
+    var ngaunhien = Math.floor((Math.random() * 20) + 1);
+    var image = document.getElementById('hinhanh');
+    image.src = "img/" + ngaunhien + ".png";
+    var kienthucshow = kienthuc[Math.floor((Math.random() * kienthuc.length))];
+    document.getElementById("textshow").innerHTML = kienthucshow;
+
+    var uri = kienthucshow;
+    var res = uri.replace(/ /g, "%20");
+    var url = "http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=" + res + "&tl=Vi-vn";
+
+    var vid = document.getElementById("myAudio");
+
+    function playVid() {
+        document.getElementById("AudopScr").src = url;
+        document.getElementById("myAudio").load();
+        //   alert(document.getElementById("AudopScr").src);
+        // vid.play();
+    }
+    playVid();
+
+
+    setTimeout(function(argument) {
+
+        uri = "Bạn đã nhớ: " + kienthucshow;
+        res = uri.replace(/ /g, "%20");
+        url = "http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=" + res + "&tl=Vi-vn";
+        vid = document.getElementById("myAudio");
+        playVid();
+        setTimeout(function(argument) {
+            history.go(0);
+        }, 9000);
+    }, 8000);
+
+}
+changeImage();
+
+document.getElementById("noidung").addEventListener("click", playVid2);
+
+function playVid2() {
+    var vid = document.getElementById("myAudio");
+    document.getElementById("myAudio").load();
+    setTimeout(function(argument) {
+        vid.play();
+    }, 1000);
+
+}
+</script>
+
+</html>
